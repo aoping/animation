@@ -111,6 +111,7 @@ body {
 
 .lines .line2 {
     animation-delay: -1.1s;
+    -ms-animation-delay: -1.1s;
 }
 
 .lines .line3 {
@@ -132,10 +133,10 @@ body {
     0%,
     40%,
     100% {
-        -webkit-transform: scaleY(.4);
+        transform: scaleY(.4);
     }
     20% {
-        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
     }
 }
 
@@ -214,9 +215,9 @@ body {
     height: auto;
     margin: 0 auto;
     position: relative;
-    -webkit-transform-origin: center top;
-    -webkit-transform: rotate(-30deg);
-    -webkit-animation: sway 2.2s infinite alternate ease-in-out;
+    transform-origin: center top;
+    transform: rotate(-30deg);
+    animation: sway 2.2s infinite alternate ease-in-out;
 }
 
 .watch {
@@ -230,19 +231,19 @@ body {
     height: auto;
     bottom: 11.5%;
     left: 45.5%;
-    -webkit-transform-origin: center 72.4%;
-    -webkit-animation: second 60s infinite linear;
+    transform-origin: center 72.4%;
+    animation: second 60s infinite linear;
 }
 
-@-webkit-keyframes second {
+@keyframes second {
     to {
-        -webkit-transform: rotate(355deg);
+        transform: rotate(355deg);
     }
 }
 
-@-webkit-keyframes sway {
+@keyframes sway {
     to {
-        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
     }
 }
 
