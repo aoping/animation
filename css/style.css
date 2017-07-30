@@ -390,3 +390,40 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.cube {
+    margin: 100px auto;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.cube1,
+.cube2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 0px;
+    left: 0px;
+    background-color: green;
+    -webkit-animation: cubemove 2s infinite ease-in-out;
+}
+
+.cube2 {
+    -webkit-animation-delay: -1s;
+}
+
+@-webkit-keyframes cubemove {
+    25% {
+        -webkit-transform: translateX(22px) rotate(-90deg) scale(0.5);
+    }
+    50% {
+        -webkit-transform: translateX(22px) translateY(22px) rotate(-180deg);
+    }
+    75% {
+        -webkit-transform: translateX(0) translateY(32px) rotate(-270deg) scale(0.5);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
