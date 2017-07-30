@@ -21,3 +21,33 @@
     transition: opacity 1s ease-in-out, transform 1s ease-in-out 0.1s;
     /*移入时执行的动画 */
 }
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border-radius: 100%;
+    margin: 100px auto;
+    animation: fadeOut 1s infinite ease-in-out;
+    -webkit-animation: fadeOut 1s infinite ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        transform: scale(0.0);
+    }
+    to {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+}
