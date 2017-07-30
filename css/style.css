@@ -151,3 +151,14 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.border {
+    border: 200px solid #000;
+    width: 0;
+    height: 0;
+    border-top-color: green;
+    border-right-color: red;
+    border-bottom-color: green;
+    border-left-color: red;
+    border-right: 0;
+}
