@@ -346,3 +346,47 @@ body {
         box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff;
     }
 }
+
+.gradient {
+    position: relative;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: #fff;
+    background: linear-gradient(left, #fff 10%, rgba(255, 255, 255, 0) 42%);
+    animation: gradient 1.4s infinite linear;
+}
+
+.gradient:before {
+    width: 50%;
+    height: 50%;
+    background: #fff;
+    position: absolute;
+    border-radius: 100% 0 0 0;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+.gradient:after {
+    background: green;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    margin: auto;
+}
+
+@keyframes gradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
