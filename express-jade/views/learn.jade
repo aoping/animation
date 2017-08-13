@@ -5,8 +5,8 @@ html
         title immoc jade studya
     body
         h1.title#title immoc jade study
-        #id.classname
-        a(href='http://baidu.com', title='jade study')百度
+        #id.classname dfasdfa
+        a(href='http://baidu.com', title='jade study') 百度
         input(name='course', type='text', value='jade')
         input(name='type', type='')
         p.
@@ -28,3 +28,42 @@ html
             被注释的内容
             被注释的内容
         
+        h2 转义
+        - var data = 'text'
+        - var htmlData = '<script>alert(1);</script>'
+        p #{data}
+        p #{htmlData}
+        p !{htmlData}
+        p= data
+        p= htmlData
+        p!= htmlData
+        p \#{htmlData}
+        p \!{htmlData}
+
+
+        h2 流程
+        h3 for
+        - var obj = {course: 'jade', level: 'height'}
+        - for (var k in obj)
+            p= obj[k]
+        h3 each obj
+        - each value, key in obj
+            p #{key}: #{value}
+        h3 each array
+        - var courses = ['node', 'jade', 'express']
+        each item in courses
+            p= item
+        h3 each array&obj
+        - var sections= [{id:1, items: ['a', 'b']}, {id:2, items: ['c', 'd']}]
+        dl
+            each section in sections
+                dt= section.id
+                each item in section.items
+                    dd= item
+        h3 while
+        - var n= 0
+        ul
+            while n< 4
+                li= n++
+            
+            
