@@ -1,8 +1,2 @@
-class Test {
-    constructor() {
-        this.a = 'hello zoro'
-    }
-}
-
-let test = new Test()
-document.body.innerHTML = test.a
+import './class/jiegou.js'
+import './class/let.js'
