@@ -1,11 +1,12 @@
 import yargs from 'yargs'
 
 const args = yargs
+
     .option('production', {
-        boolean: true,
-        default: false,
-        describe: 'min all scripts'
-    })
+    boolean: true,
+    default: false,
+    describe: 'min all scripts'
+})
 
 .option('watch', {
     boolean: true,
@@ -30,3 +31,5 @@ const args = yargs
 })
 
 .argv
+
+export default args;

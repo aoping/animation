@@ -1,0 +1,31 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "练习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve -p 12501"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aoping/animation.git"
+  },
+  "author": "zoro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aoping/animation/issues"
+  },
+  "homepage": "https://github.com/aoping/animation#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "require-dir": "^0.3.2",
+    "serve": "^6.0.3",
+    "webpack": "^3.5.5"
+  }
+}
