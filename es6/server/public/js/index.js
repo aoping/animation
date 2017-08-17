@@ -192,6 +192,41 @@ function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
     console.log(_a6, _b6);
 }
 
+// 对象解构赋值
+{
+    var o = { p: 1, q: 2 };
+    var p = o.p,
+        q = o.q;
+
+    console.log(p, q);
+}
+// 对象解构赋值
+{
+    var _p2 = { p: 1 },
+        _p2$p = _p2.p,
+        _p = _p2$p === undefined ? 3 : _p2$p,
+        _p2$q = _p2.q,
+        _q = _p2$q === undefined ? 4 : _p2$q;
+
+    console.log(_p, _q);
+}
+// 对象解构赋值
+{
+    var metaData = {
+        title: 'abc',
+        test: [{
+            title: 'test',
+            desc: 'xxx'
+        }]
+    };
+
+    var _p3 = metaData.title,
+        _metaData$test = _slicedToArray(metaData.test, 1),
+        _q2 = _metaData$test[0].title;
+
+    console.log(_p3, _q2);
+}
+
 /***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {

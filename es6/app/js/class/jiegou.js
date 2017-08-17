@@ -49,3 +49,27 @@
     [a, ...b] = f()
     console.log(a, b);
 }
+
+// 对象解构赋值
+{
+    let o = { p: 1, q: 2 }
+    let { p, q } = o
+    console.log(p, q)
+}
+// 对象解构赋值
+{
+    let { p = 3, q = 4 } = { p: 1 }
+    console.log(p, q)
+}
+// 对象解构赋值
+{
+    let metaData = {
+        title: 'abc',
+        test: [{
+            title: 'test',
+            desc: 'xxx'
+        }]
+    }
+    let { title: p, test: [{ title: q }] } = metaData
+    console.log(p, q)
+}
