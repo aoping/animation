@@ -11,7 +11,7 @@ import uglify from 'gulp-uglify'
 import util from 'gulp-util'
 import args from './util/args'
 
-gulp.task('script', () => {
+gulp.task('scripts', () => {
     return gulp.src(['app/js/index.js'])
         .pipe(plumber({
             errorHandle: function() {

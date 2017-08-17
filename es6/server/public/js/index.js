@@ -77,5 +77,16 @@ module.exports = __webpack_require__(1);
 "use strict";
 
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Test = function Test() {
+    _classCallCheck(this, Test);
+
+    this.a = 'hello zoro';
+};
+
+var test = new Test();
+document.body.innerHTML = test.a;
+
 /***/ })
 /******/ ]);
