@@ -12,6 +12,9 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "path": "^0.12.7"
+    "css-loader": "^0.28.5",
+    "file-loader": "^0.11.2",
+    "path": "^0.12.7",
+    "url-loader": "^0.5.9"
   }
 }

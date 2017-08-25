@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "https://cdn.example.com/assets/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -75,6 +75,9 @@
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__maths_js__ = __webpack_require__(/*! ./maths.js */ 1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_main_css__ = __webpack_require__(/*! ./css/main.css */ 2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_main_css__);
+
 
 console.log(Object(__WEBPACK_IMPORTED_MODULE_0__maths_js__["a" /* cube */])(5)); // 125
 // console.log(square(5)); // 125
@@ -101,6 +104,16 @@ function square(x) {
 function cube(x) {
     return x * x * x;
 }
+
+/***/ }),
+/* 2 */
+/*!**********************!*\
+  !*** ./css/main.css ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: D:\\zoro\\git-project\\animation\\webpack\\css\\main.css Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .img {\r\n|     background-image: url('../img/1.png')\r\n| }");
 
 /***/ })
 /******/ ]);
