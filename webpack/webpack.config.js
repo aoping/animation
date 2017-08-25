@@ -28,5 +28,11 @@ module.exports = {
             return /jquery|lodash/.test(content);
         }
     },
-
+    resolve: {
+        // 取别名， 精简路径
+        alias: {
+            css: path.resolve(__dirname, './css'),
+            img: path.resolve(__dirname, './img'),
+        }
+    }
 }
