@@ -33,6 +33,13 @@ module.exports = {
         alias: {
             css: path.resolve(__dirname, './css'),
             img: path.resolve(__dirname, './img'),
-        }
-    }
+            // jquery$: 'jquery',
+            // jquery$: path.resolve(__dirname, './jquery'),
+        },
+        // 可以省略的扩展名
+        extensions: ['.js', '.json'],
+        // 告诉 webpack 解析模块时应该搜索的目录
+        modules: ["node_modules"]
+    },
+    devtool: 'eval'
 }
