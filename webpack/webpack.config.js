@@ -22,6 +22,11 @@ module.exports = {
                 test: /\.(png|jpg|jpge|svg|gif)$/,
                 loader: 'url-loader?limit=10'
             }
-        ]
-    }
+        ],
+        // 不解析jQuery，加快打包速度
+        noParse: function(content) {
+            return /jquery|lodash/.test(content);
+        }
+    },
+
 }
