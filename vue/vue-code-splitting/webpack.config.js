@@ -1,4 +1,5 @@
 let path = require('path')
+let webpack = require('webpack')
 module.exports = {
     entry: path.resolve(__dirname, './src/main.js'),
     output: {
@@ -28,5 +29,11 @@ module.exports = {
         extensions: ['.vue', '.js']
     },
     // 报错时是定位到源码还是编译后的代码
-    // devtool: 'eval'
+    // devtool: 'eval',
+    plugins: [
+        new webpack.DllReferencePlugin({
+            context: '.',
+            manifest: require("./dist/vendor-mainifest.json"),
+        }),
+    ]
 }
