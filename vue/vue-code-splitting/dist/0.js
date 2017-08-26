@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\nh1[data-v-596d0e78], h2[data-v-596d0e78] { \nfont-weight: normal;\n}\nul[data-v-596d0e78] { \nlist-style-type: none; \npadding: 0;\n}\nli[data-v-596d0e78] { \ndisplay: inline-block; \nmargin: 0 10px;\n}\na[data-v-596d0e78] { \ncolor: #42b983;\n} \n", ""]);
+exports.push([module.i, "\nh1[data-v-596d0e78],\r\nh2[data-v-596d0e78] {\r\n    font-weight: normal;\n}\nul[data-v-596d0e78] {\r\n    list-style-type: none;\r\n    padding: 0;\n}\nli[data-v-596d0e78] {\r\n    display: inline-block;\r\n    margin: 0 10px;\n}\na[data-v-596d0e78] {\r\n    color: #42b983;\n}\r\n", ""]);
 
 // exports
 
@@ -49,20 +49,29 @@ exports.push([module.i, "\nh1[data-v-596d0e78], h2[data-v-596d0e78] { \nfont-wei
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
+//
 //
 //
 //
 //
 
 exports.default = {
-  name: 'first',
-  data: function data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    };
-  }
+    name: 'first',
+    data: function data() {
+        return {
+            msg: 'Welcome to Your Vue.js App'
+        };
+    },
+
+    methods: {
+        click: function click() {
+            alert('hello');
+            aaa;
+        }
+    }
+
 };
 
 /***/ }),
@@ -72,7 +81,11 @@ exports.default = {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v("我是第一个页面")])
+  return _c('div', {
+    on: {
+      "click": _vm.click
+    }
+  }, [_vm._v("\n    " + _vm._s(_vm.msg))])
 }
 var staticRenderFns = []
 render._withStripped = true
