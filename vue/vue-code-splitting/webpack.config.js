@@ -9,11 +9,12 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.js$/,
-                loader: ['babel-loader']
+                loaders: ['babel-loader?cacheDirectory'],
+                exclude: path.resolve(__dirname, './node_modules/')
             },
             {
                 test: /\.vue$/,
-                loader: ['vue-loader']
+                loaders: ['vue-loader']
             }
         ]
     },
