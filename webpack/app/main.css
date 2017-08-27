@@ -1,0 +1,7 @@
+body {
+    background: lime;
+}
+
+:local(.redButton) {
+    background: red;
+}
