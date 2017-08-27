@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-
+let path = require('path')
 exports.devServer = function(options) {
     return {
         watchOptions: {
@@ -38,7 +38,12 @@ exports.devServer = function(options) {
             // in larger projects. Good default.
             new webpack.HotModuleReplacementPlugin({
                 multiStep: true
-            })
+            }),
+            // Ignore node_modules so CPU usage with poll
+            // watching drops significantly.
+            new webpack.WatchIgnorePlugin([
+                path.join(__dirname, 'node_modules')
+            ]),
         ]
     };
 }
