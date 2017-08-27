@@ -24,3 +24,30 @@ exports.lintJavaScript = ({ include, exclude, options }) => ({
         }, ],
     },
 });
+exports.loadCSS = ({ include, exclude } = {}) => ({
+    module: {
+        rules: [{
+                test: /\.css$/,
+                include,
+                exclude,
+                loaders: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => ([
+                                require('autoprefixer'),
+                                require('precss'),
+                            ]),
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.less$/,
+                loaders: ['style-loader', 'css-loader', 'less-loader'],
+            },
+        ],
+    },
+});
