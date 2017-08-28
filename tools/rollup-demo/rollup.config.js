@@ -16,5 +16,6 @@ export default {
     ],
     // 指明哪个模块被看作外部引用(external)
     external: ['lodash'],
-    dest: 'bundle.js'
+    dest: 'bundle.js',
+    sourceMap: true
 };
