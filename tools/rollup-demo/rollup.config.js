@@ -1,8 +1,9 @@
-import json from 'rollup-plugin-json';
+// import json from 'rollup-plugin-json';
+import resolve from 'rollup-plugin-node-resolve';
 
 export default {
     entry: 'src/main.js',
     format: 'cjs',
-    plugins: [json()],
+    plugins: [resolve()],
     dest: 'bundle.js'
 };

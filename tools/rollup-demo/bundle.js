@@ -1,9 +1,11 @@
 'use strict';
 
-var version = "1.0.0";
+var index = 42;
 
+// import { version } from '../package.json';
 var main = function() {
     console.log('version ' + version);
+    console.log('the answer is ' + index);
 };
 
 module.exports = main;
