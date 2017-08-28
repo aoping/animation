@@ -76,3 +76,11 @@ exports.extractCSS = ({ include, exclude, use }) => {
         plugins: [plugin],
     };
 };
+exports.autoprefix = () => ({
+    loader: 'postcss-loader',
+    options: {
+        plugins: () => ([
+            require('autoprefixer')(),
+        ]),
+    },
+});
