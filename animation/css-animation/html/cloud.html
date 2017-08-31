@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-title" content="Web前端(W3Cways.com) - Web前端学习之路">
+    <title>实例:多重背景的CSS动画-Web前端(W3Cways.com) – Web前端学习之路 </title>
+    <link rel="stylesheet" id="_main-css" href="./实例_多重背景的CSS动画-Web前端(W3Cways.com) – Web前端学习之路_files/example.css" type="text/css" media="all">
+</head>
+
+<body>
+    <div class="demo-container demoshow">
+        <style>
+            @keyframes animatedBird {
+                from {
+                    background-position: 20px 20px, 30px 80px, 0 0;
+                }
+                to {
+                    background-position: 300px -90px, 30px 20px, 100% 0;
+                }
+            }
+            
+            @-webkit-keyframes animatedBird {
+                from {
+                    background-position: 20px 20px, 30px 80px, 0 0;
+                }
+                to {
+                    background-position: 300px -90px, 30px 20px, 100% 0;
+                }
+            }
+            
+            @-ms-keyframes animatedBird {
+                from {
+                    background-position: 20px 20px, 30px 80px, 0 0;
+                }
+                to {
+                    background-position: 300px -90px, 30px 20px, 100% 0;
+                }
+            }
+            
+            @-moz-keyframes animatedBird {
+                from {
+                    background-position: 20px -90px, 30px 80px, 0 0;
+                }
+                to {
+                    background-position: 300px -90px, 30px 20px, 100% 0;
+                }
+            }
+            
+            .animate-area {
+                width: 560px;
+                height: 190px;
+                background-image: url(http://www.w3cways.com/demo/multiple-background-css-animations/bg-clouds.png);
+                background-position: 0px 0px;
+                background-repeat: repeat-x;
+                animation: animatedBird 4s linear infinite;
+                -ms-animation: animatedBird 4s linear infinite;
+                -moz-animation: animatedBird 4s linear infinite;
+                -webkit-animation: animatedBird 4s linear infinite;
+                overflow: hidden;
+            }
+            
+            .animate-area2 {
+                width: 560px;
+                height: 190px;
+                background-image: url(http://www.w3cways.com/demo/multiple-background-css-animations/twitter-logo-bird.png), url(http://www.w3cways.com/demo/multiple-background-css-animations/treehouseFrog.png), url(http://www.w3cways.com/demo/multiple-background-css-animations/bg-clouds.png);
+                background-position: 20px -90px, 30px 80px, 0px 0px;
+                background-repeat: no-repeat, no-repeat, repeat-x;
+                animation: animatedBird 4s linear infinite;
+                -ms-animation: animatedBird 4s linear infinite;
+                -moz-animation: animatedBird 4s linear infinite;
+                -webkit-animation: animatedBird 4s linear infinite;
+                overflow: hidden;
+            }
+        </style>
+        <div class="animate-area"></div>
+        <div class="animate-area2"></div>
+    </div>
+</body>
+
+</html>
